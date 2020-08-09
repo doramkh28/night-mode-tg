@@ -1,0 +1,435 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: "Roboto", "Arial", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/body-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+.container{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+.light-theme .telegram-open-close{
+  background-color: #eee;
+}
+.light-theme .telegram-search{
+  background-color: #fff;
+}
+.light-theme .search-menu{
+  background-color: #eee;
+}
+.light-theme .telegram-chats{
+  background-color: #fff;
+}
+.light-theme .archive-chats{
+  background-color: #eee;
+}
+.light-theme .menu-bar{
+  background-color: #fff;
+}
+.light-theme .chat-info{
+  background-color: #fff;
+}
+.light-theme .chat-menu{
+  background-image: url('../img/chat-bg.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.light-theme .left-text{
+  background-color: #5694f1;
+}
+.light-theme .right-text{
+  background-color: #eee;
+}
+.light-theme .left-text::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  border-top: 10px solid #5694f1;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  content: "";
+}
+.light-theme .right-text::after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%);
+  border-top: 10px solid #eee;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  content: "";
+}
+.light-theme .message-send-bar{
+  background-color: #fff;
+}
+/* dark theme for bgc */
+.dark-theme .telegram-open-close{
+  background-color: #263859;
+}
+.dark-theme .telegram-search{
+  background-color: #17223b;
+}
+.dark-theme .search-menu{
+  background-color: #263859;
+}
+.dark-theme .telegram-chats{
+  background-color: #17223b;
+}
+.dark-theme .archive-chats{
+  background-color: #263859;
+}
+.dark-theme .menu-bar{
+  background-color: #17223b;
+}
+.dark-theme .chat-info{
+  background-color: #17223b;
+}
+.dark-theme .chat-menu{
+  background-image: url('../img/light-chat-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dark-theme .left-text{
+  background-color: #6b778d;
+}
+.dark-theme .right-text{
+  background-color: #263859;
+}
+.dark-theme .left-text::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  border-top: 10px solid #6b778d;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  content: "";
+}
+.dark-theme .right-text::after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(50%);
+  border-top: 10px solid #263859;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  content: "";
+}
+.dark-theme .message-send-bar{
+  background-color: #17223b;
+}
+.telegram-open-close{
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  border-radius: 5px 5px 0 0;
+}
+.open-close{
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.red{
+  background-color: #eb5757;
+  margin-left: 5px;
+}
+.yellow{
+  background-color: #f5d906;
+}
+.green{
+  background-color: #2ac54c;
+}
+.light-theme .open-close-text{
+  color: #413f3f;
+}
+.dark-theme .open-close-text{
+  color: #ccc;
+}
+.open-close-text{
+  flex-grow: 1;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+.telegram-desktop{
+  display: flex;
+  align-items: stretch;
+}
+.telegram-left{
+  width: 300px;
+}
+.telegram-search{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  align-items: center;
+}
+.light-theme .search-menu{
+  color: #A5A5A5;
+}
+.dark-theme .search-menu{
+  color: #ccc;
+}
+.search-menu{
+  font-size: 13px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  padding: 8px 0;
+  margin: 11px 0;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.search-icon{
+  display: block;
+  margin-right: 5px;
+}
+.telegram-chats{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  overflow: auto;
+}
+.light-theme .archive-chats{
+  color: #A5A5A5;
+}
+.dark-theme .archive-chats{
+  color: #ccc;
+}
+.archive-chats{
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1.5;
+  text-align: center;
+  padding: 5px 0;
+}
+.chat{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 10px 0 10px;
+}
+.profile-pic{
+  display: block;
+  border-radius: 50%;
+}
+.chat-text{
+  width: 210px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.chat-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.light-theme .chat-name{
+  color: #000;
+}
+.dark-theme .chat-name{
+  color: #eee;
+}
+.chat-name{
+  flex-grow: 1;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+.light-theme .chat-time{
+  color: #A5A5A5;
+}
+.dark-theme .chat-time{
+  color: #ccc;
+}
+.chat-time{
+  font-weight: 300;
+  font-size: 12px;
+}
+.two-tick{
+  display: block;
+}
+.light-theme .chat-message{
+  color: #A5A5A5;
+}
+.dark-theme .chat-message{
+  color: #eee;
+}
+.chat-message{
+  display: flex;
+  font-size: 12px;
+  font-weight: 300;
+  padding-top: 8px;
+  margin: 0;
+}
+.chat-message p{
+  flex-grow: 1;
+  margin: 0;
+}
+.chat-message span{
+  display: flex;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  background-color: green;
+  border-radius: 50%
+}
+.menu-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 49px;
+  padding: 7px 20px;
+  border-top: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.menu-bar a{
+  display: block;
+  text-decoration: none;
+}
+.my-profile{
+  border-radius: 50%;
+}
+/* Right side telegram */
+.telegram-right{
+  width: 600px;
+  border-left: 1px solid #eee;
+}
+.chat-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 25px;
+  border-bottom: 1px solid #eee;
+}
+.chat-info img{
+  display: block;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.light-theme .chat-info p{
+  color: #000;
+}
+.dark-theme .chat-info p{
+  color: #eee;
+}
+.chat-info p{
+  flex-grow: 1;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.search-icon-chat{
+  margin: 0 20px;
+}
+.three-dots{
+  display: block;
+  width: 25px;
+  height: 28px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+}
+.chat-menu{
+  height: 500px;
+  padding: 20px 30px;
+  overflow: auto;
+  border-bottom: 1px solid #eee;
+}
+.light-theme .chat-menu div{
+  color: #000;
+}
+.dark-theme .chat-menu div{
+  color: #ccc;
+}
+.chat-menu div{
+  position: relative;
+  font-size: 14px;
+  width: 400px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.left-text{
+  margin-right: auto;
+}
+.right-text{
+  margin-left: auto;
+}
+.message-send-bar{
+  display: flex;
+  align-items: center;
+  max-height: 49px;
+  padding: 7px 20px;
+}
+.message-send-bar a{
+  display: block;
+  text-decoration: none;
+  margin: 0 3px;
+}
+.send-message{
+  background-color: transparent;
+  flex-grow: 1;
+}
+.send-message input{
+  background-color: transparent;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+}
+.send-message input::placeholder{
+  font-size: 14px;
+}
+.light-theme .send-message input::placeholder{
+  color: default;
+}
+.dark-theme .send-message input::placeholder{
+  color: #ccc;
+}
+.choose-mode{
+  margin-bottom: 50px;
+}
+.modes{
+  width: 600px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modes button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgba(106, 45, 190, 0.7);
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modes button img{
+  display: block;
+  margin-right: 15px;
+}
